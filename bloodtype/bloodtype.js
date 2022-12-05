@@ -1,13 +1,13 @@
 const type = ["O+", "O-", "A+", "A-", "B+", "B-", "AB+", "AB-"];
 function canGiveBlood(a, b){
 	if (!type.includes(a) || !type.includes(b)){
-		return false
+		return false;
 	}
 	else if(b[b.length - 1] == "-" && a[a.length - 1] == "+"){
 		return false;
 	}
 	else if(b[0] == "O" && a[0] != "O"){
-        return false
+        	return false;
 	}
 	else if((b[0] == 'B' || b[1] == 'B') && !a.includes('B')){
 		return false;
